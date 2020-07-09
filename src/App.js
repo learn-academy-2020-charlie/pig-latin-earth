@@ -31,9 +31,35 @@ class App extends Component {
     // now that we have an array of words, we can map over the array and access each word
     splitUserInput.map(currentWord => {
       // ACTION ITEM: use 'currentWord' as a starting point for your code
+  
+      //make new variable that splits currentWord into array
+      //make new varialble that holds the shifted letters
 
+      //the letter y as a vowel
+        //if y isnt first, then shift everything before the first y and push it to the end
+        
+      //words that start with qu 
+        //(currentWord.charAt(0) === "q" && (currentWord.charAt(1) === "u"
+        //shift the qu and push to the end of currentWord
+        
+      //words with multiple consonants before the qu (squirrel)
+        //(currentWord.charAt(value) === "q" && (currentWord.charAt(value + [1]) === "u"
+        //s q u e a l
+        
+        //words that start with mutilple consonants
+        //1 split currentWord into an array
+        //2 shift until we reach a value thats a vowel
+        //3 push the consonants to the end and add pig latin (ay)
+        
+        //words that start with consonants
+        //(currentWord.charAt(0) !== "a" || "e" || "i" || "o" || "u")
+        //(ay)
+        //(the letter y as a consonant- it gets caught here)
 
-      // your code here!
+      //words that start with vowels = 
+        //(currentWord.charAt(0) === "a" || "e" || "i" || "o" || "u")
+        //(way)
+
 
       // Remember: console.log is your friend :)
 
