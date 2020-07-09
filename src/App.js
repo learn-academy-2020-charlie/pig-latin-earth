@@ -31,74 +31,44 @@ class App extends Component {
     // now that we have an array of words, we can map over the array and access each word
     splitUserInput.map(currentWord => {
       // ACTION ITEM: use 'currentWord' as a starting point for your code
+      
+      
+      
+      
+      
+      var pigLatinWord = ""
 
-      //make new variable that splits currentWord into array
-      let arrLetters = []
-      //make new varialble that holds the shifted letters
-      // let removedLetters = []
-
-      arrLetters = currentWord.split("")
-
-      //the letter y as a vowel
-        //if y isnt first, then shift everything before the first y and push it to the end
-
-      //words that start with qu
-        //(currentWord.charAt(0) === "q" && (currentWord.charAt(1) === "u"
-        //shift the qu and push to the end of currentWord
-
-      //words with multiple consonants before the qu (squirrel)
-        //(currentWord.charAt(value) === "q" && (currentWord.charAt(value + [1]) === "u"
-        //s q u e a l
-
-        //words that start with mutilple consonants
-        //1 split currentWord into an array
-        //2 shift until we reach a value thats a vowel
-        //3 push the consonants to the end and add pig latin (ay)
-        //&& (currentWord.charAt(value + [1]) !== "a" || "e" || "i" || "o" || "u")
-        //FOR EVERY INSTANCE OF "A" || ETC ETC HAVE TO REITERATE "arrLetters[0] !==""
-        if (arrLetters[0] !== "a" || arrLetters[0] !== "e" || arrLetters[0] !== "i" || arrLetters[0] !== "o" || arrLetters[0] !== "u" ) {
-          let multLett = []
-          for (let i = 0; i < arrLetters.length; i++) {
-            if (arrLetters[i] !== "a" || arrLetters[i] !==  arrLetters[i] !== "e" || arrLetters[i] !=="i" || arrLetters[i] !=="o" || arrLetters[i] !=="u" ){
-              //shift
-              let tempLett = arrLetters.shift()
-              //push to multLett
-               multLett.push(tempLett)
-        //       console.log(arrLetters)
-            }
+      //if the first letter of the word is a vowel, add "way" at the end
+      if (currentWord.charAt(0) === "a" || currentWord.charAt(0) === "e" || currentWord.charAt(0) === "i" || currentWord.charAt(0) === "o" || currentWord.charAt(0) === "u"){
+        pigLatinWord = currentWord + "way"
+      //if the word starts with a consonant  
+      } else if (currentWord.charAt(0) !== "a" || currentWord.charAt(0) !== "e" || currentWord.charAt(0) !== "i" || currentWord.charAt(0) !== "o" || currentWord.charAt(0) !== "u"){
+      //finding the first instance of a vowel by splitting up the word and mapping through it
+        let firstVowelIndex = currentWord.split("").map((value, index) =>{
+          if (value === "a" || value === "e" || value === "i" || value === "o" || value === "u"){
+            return index
           }
-          arrLetters.push(multLett)
-          arrLetters.push("ay")
-          console.log(arrLetters)
-          return arrLetters
-        }
+        })
+        //split currentWord
+        let
+        //with the first vowel index, everything before goes to the end of the word
+        
+      }
+    
 
-        //words that start with consonants
-        //(the letter y as a consonant- it gets caught here)
 
-        //pretend input is hello
-        //push
-        //shift
-        //+ay
-        if (arrLetters[0] !== "a" || "e" || "i" || "o" || "u") {
-          let singleLett = arrLetters.shift(0)
-          return arrLetters.push(singleLett) + "ay"
-        }
-        //(ay)
 
-      //words that start with vowels =
-        else if (arrLetters[0] === "a" || "e" || "i" || "o" || "u") {
-          return `${currentWord}way`
-        }
 
-        //(way)
+
+
+
 
 
       // Remember: console.log is your friend :)
 
 
       // ACTION ITEM: change the value of currentWord in the push method to the name of whatever variable you made containing your Pig Latin'd word
-      return translatedWordsArray.push(currentWord)
+      return translatedWordsArray.push(pigLatinWord)
     })
 
 
