@@ -50,7 +50,7 @@ class App extends Component {
           }
         })
         //split currentWord
-        let
+        let 
         //with the first vowel index, everything before goes to the end of the word
         
       }
