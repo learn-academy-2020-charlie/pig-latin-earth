@@ -33,7 +33,11 @@ class App extends Component {
       // ACTION ITEM: use 'currentWord' as a starting point for your code
   
       //make new variable that splits currentWord into array
+      let arrLetters = []
       //make new varialble that holds the shifted letters
+      let removedLetters = []
+
+      arrLetters = currentWord.split("")
 
       //the letter y as a vowel
         //if y isnt first, then shift everything before the first y and push it to the end
@@ -50,14 +54,36 @@ class App extends Component {
         //1 split currentWord into an array
         //2 shift until we reach a value thats a vowel
         //3 push the consonants to the end and add pig latin (ay)
+        //&& (currentWord.charAt(value + [1]) !== "a" || "e" || "i" || "o" || "u")
+        //FOR EVERY INSTANCE OF "A" || ETC ETC HAVE TO REITERATE "arrLetters[0] !==""
+        if (arrLetters[0] !== "a" || "e" || "i" || "o" || "u" ) {
+          for (let i = 0; i < arrLetters.length; i++) {
+            if (arrLetters[i] !== "a" ||  "e" || "i" || "o" || "u" ){
+              
+            } else {
+
+            }
+          }
+        }
         
         //words that start with consonants
-        //(currentWord.charAt(0) !== "a" || "e" || "i" || "o" || "u")
-        //(ay)
         //(the letter y as a consonant- it gets caught here)
 
+        //pretend input is hello
+        //push
+        //shift 
+        //+ay
+        if (arrLetters[0] !== "a" || "e" || "i" || "o" || "u") {
+          let singleLett = arrLetters.shift(0)
+          return arrLetters.push(singleLett) + "ay"
+        }
+        //(ay)
+
       //words that start with vowels = 
-        //(currentWord.charAt(0) === "a" || "e" || "i" || "o" || "u")
+        else if (arrLetters[0] === "a" || "e" || "i" || "o" || "u") {
+          return `${currentWord}way`
+        }
+
         //(way)
 
 
